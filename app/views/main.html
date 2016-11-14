@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-md-6 col-sm-6">
+        <span class="badge badges">{{mainctrl.count}}</span><i class="fa fa-shopping-cart fa-5x" aria-hidden="true"></i>
+    </div>
+    <div class="col-md-6 col-sm-6">
+        <p>Total Items: {{mainctrl.count}}</p>
+        <p>Subtotal: {{mainctrl.subtotal}}</p>
+        <p>Discount: {{mainctrl.discount}}</p>
+        <p>Total : {{mainctrl.subtotal-mainctrl.discount}}
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-default" ng-click="applyPromotion()">Apply to Promo Discount!</a>
+    <h2>{{"views.main.i18n for your AngularJS Weather applications" | translate}}</h2>
+    <div ng-repeat="product in dataArray" class="col-md-6 col-sm-6 hero-feature">
+        <div class="thumbnail">
+            <img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+                <h3>{{product.p_id}}</h3>
+                <p>{{product.p_name}}</p>
+                <span class="badges">{{product.c_currency}}</span><span class="fa-2x">{{product.p_price}}</span>
+                <p>{{product.p_variation}}</p>
+                <p>{{product.p_style}}</p>
+                <div ng-repeat="color in product.p_available_options.colors">
+                    <div style="display:flex;float:left;margin:10px;width:20px;color:{{color.hexcode}};background-color:{{color.hexcode}}">
+                        .
+                    </div>
+                </div>
+                <div ng-repeat="size in product.p_available_options.sizes">
+                    <div style="display:flex;float:left;margin:10px;width:20px;border:1px solid #ccc;color:blue;text-align:center">
+                        {{size.code}}
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <p>
+                    <a class="btn btn-primary" ng-click="editItem(product,product.p_id)">Buy Now!</a> <a
+                        class="btn btn-primary" ng-click="addtoCart(product,product.p_id)">Add to cart!</a>
+                </p>
+                <p>
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p class="lead">
+        <img ng-src="images/no-filerev/yeoman-{{locale}}.png?v={{VERSION_TAG}}"><br>
+    </p>
+</div>

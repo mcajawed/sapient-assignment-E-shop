@@ -1,0 +1,26 @@
+.navbar-header .navbar-toggle {
+  float: left;
+  margin-left: 50px;
+}
+
+.language-selector {
+  $height: 6px + 14px;
+  line-height: $height;
+  margin-top: 8px;
+
+  select {
+    -webkit-appearance: menulist-button;
+    height: $height;
+  }
+}
+.language-select {
+  $height: 6px + 14px;
+  line-height: $height;
+  margin-top: 8px;
+
+  select {
+    -webkit-appearance: menulist-button;
+    height: $height;
+    width:100%;
+  }
+}

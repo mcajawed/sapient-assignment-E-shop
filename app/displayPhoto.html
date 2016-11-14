@@ -1,0 +1,46 @@
+<div class="modal-header">
+<button type="button" class="close" ng-click="modalCancel()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<div class="col-md-6 col-sm-6">
+	<div class="thumbnail bordernone borderTop2px">                    
+		<div class="caption text-center">                        
+			<p>{{product.p_name}}</p>
+			<span class="badges">{{product.c_currency}}</span><span class="fa-2x">{{product.p_price}}</span>
+			<p>{{product.p_variation}}</p>
+			<p>{{product.p_style}}</p>
+			<div ng-repeat="color in product.p_available_options.colors">
+			<div style="display:flex;float:left;margin:10px;width:20px;color:{{color.hexcode}};background-color:{{color.hexcode}}">.</div>
+			</div>
+			<div ng-repeat="size in product.p_available_options.sizes">
+			<div style="display:flex;float:left;margin:10px;width:20px;border:1px solid #ccc;color:blue;text-align:center">{{size.code}}</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="form-group">
+		
+		<select id="sizes" ng-model="size" ng-options="sizes for (sizes, quan) in product.p_available_options.sizes"
+				ng-change="GetSelectedSizes()">
+			<option value=''>Size</option>
+		</select>
+		<select id="quan" ng-model="quantity"
+				ng-options="quan for (quan,ci) in size"
+				ng-change="GetSelectedQuan()">
+			<option value=''>Quan:1</option>
+		</select>
+	</div>
+			
+			<button type="button" class="btn btn-primary btn-block" ng-click ="editContact(product,product.p_id)">Edit Now!</button>
+			
+		</div>
+	</div>
+</div>
+<div class="col-md-6 col-sm-6">
+<div class="thumbnail bordernone">
+<img src="http://placehold.it/800x500" alt="">
+</div>
+</div>
+
+</div>
+<div class="modal-footer">
+
+</div>
