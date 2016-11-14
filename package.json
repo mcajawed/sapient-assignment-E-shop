@@ -1,12 +1,17 @@
 {
-  "name": "sapient",
+  "name": "sapienttest",
   "version": "1.0.0",
   "description": "Assignment Angularjs",
-  "main": "index.js",
+  "main": "index.js",  
+    "repository": {
+    "type": "git",
+    "url": "nan"
+  },
   "keywords": [
-    "Assignment",
-    "multilingual"
+    "jawed"
   ],
+  "author": "jawed akhter",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.7.13",
     "gulp": "^3.9.0",

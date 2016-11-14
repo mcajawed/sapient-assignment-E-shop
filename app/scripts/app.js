@@ -5,8 +5,9 @@ angular
         'ngAnimate',
         'ngCookies',
         'ngResource',
-        'ui.router',
+        
         'ui.bootstrap',
+		'ui.router',
         'ngSanitize',
         'ngTouch',
         'pascalprecht.translate',
